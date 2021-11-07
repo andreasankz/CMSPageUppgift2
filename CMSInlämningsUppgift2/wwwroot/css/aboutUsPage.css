@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+.full-page {
+    display:flex;
+    justify-content: center;
+    
+}
+
+#grid-aboutus {
+    display: grid;
+    height:auto;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+    column-gap: 30px;
+}
+
+.grid-full {
+        box-shadow: rgba(77, 137, 99) 0px 5px 15px;
+    }
+    
+.welcome-text {
+    font-size: 2.5rem !important;
+    font-family: 'Irish Grover', cursive !important;
+}

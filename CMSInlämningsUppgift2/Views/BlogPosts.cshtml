@@ -1,0 +1,31 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.BlogPosts>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "Master.cshtml";
+}
+
+<div class="blogPost mt-5 d-flex justify-content-center">
+    <div class="mt-5 blogpost-card">
+        
+        @{
+            var postImage = Model.Value<IPublishedContent>("blogPostImage");
+        }
+        
+        @if(postImage != null) {
+            <img src="@postImage.Url()"/>
+        }
+        
+        
+        <h1 class="mt-5">@Model.Value("blogPostHeadline")</h1>
+        <div class="mt-5">
+            <p class="post-paragraph">@Model.Value("blogPostContent")</p>
+        </div>
+        
+    
+    </div>
+</div>
+
+
+
+

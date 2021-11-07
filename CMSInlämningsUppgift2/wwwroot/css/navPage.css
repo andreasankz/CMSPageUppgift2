@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+.navbar {
+    background-color: rgb(77, 137, 99);
+}
+
+.nav-link {
+    font-weight: 700;
+    justify-content: end;
+    font-size: 1.5rem;
+}
+
+.nav-link:hover {
+    color: rgb(92, 91, 91) !important;
+}
+.signature {
+    font-size: 2.5rem;
+    font-family: 'Irish Grover', cursive;
+}
+
+.nav-text-align {
+    justify-content: end;
+}
+        

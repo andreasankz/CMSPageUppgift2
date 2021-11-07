@@ -1,0 +1,43 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+
+
+@{
+	var blogPosts = Umbraco.Content(1073)
+    .ChildrenOfType("blogPosts")
+    .Where(x => x.IsVisible())
+    .OrderByDescending(x => x.CreateDate).Take(3);
+}
+
+
+<div class="blogpost-card mt-5">
+    
+	@foreach (var item in blogPosts)
+	{
+	        
+	         
+	    <div>
+	        @{ 
+	            var blogImage = item.Value<IPublishedContent>("blogPostImage");
+	            
+	         }
+	         
+	         @if(blogImage != null) {
+	            <a href="@item.Url()"><img style="width:480px;" src="@blogImage.Url()" /></a> 
+	         }
+	         
+	        
+	    </div>
+	    <div class="mt-4 d-flex justify-content-center">
+	        <a class="a-link-style" href="@item.Url()"><h3>@item.Value("blogPostHeadline")</h3></a>
+	    </div>
+	    <hr class="mb-5 mt-3">
+	    
+		
+	}
+    
+</div>
+
+
+
+ 
